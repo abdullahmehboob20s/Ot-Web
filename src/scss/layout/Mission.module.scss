@@ -1,0 +1,96 @@
+@use "../utils" as u;
+
+.wrapper {
+  main {
+    max-width: u.rem(1000);
+    margin: 0 auto;
+    background: rgba(2, 146, 155, 0.14);
+    border-radius: 12px;
+    padding: u.rem(75) u.rem(45);
+
+    header {
+      display: flex;
+      img {
+        width: 60%;
+        margin: 0 auto;
+        background-color: white;
+        padding: u.rem(25);
+        border-radius: 12px;
+      }
+    }
+
+    section {
+      background: #02929b;
+      box-shadow: 0px 100px 80px rgba(27, 74, 88, 0.04),
+        0px 59.921px 36.9864px rgba(27, 74, 88, 0.0312355),
+        0px 40.7075px 21.1628px rgba(27, 74, 88, 0.028182),
+        0px 27.0541px 12.8457px rgba(27, 74, 88, 0.0260864),
+        0px 16.5821px 7.74008px rgba(27, 74, 88, 0.0240553),
+        0px 8.45789px 4.31018px rgba(27, 74, 88, 0.0214251),
+        0px 2.51394px 1.85378px rgba(27, 74, 88, 0.0170396);
+      border-radius: 12px;
+      padding: u.rem(38) u.rem(52);
+    }
+
+    @include u.breakpoint(twoxLarge) {
+      max-width: u.rem(700);
+      padding: u.rem(30) u.rem(30);
+
+      header {
+        img {
+          width: 60%;
+          padding: u.rem(18);
+        }
+      }
+    }
+    @include u.breakpoint(xLarge) {
+      max-width: u.rem(600);
+      padding: u.rem(26) u.rem(22);
+
+      header {
+        img {
+          padding: u.rem(12);
+        }
+      }
+
+      section {
+        padding: u.rem(22) u.rem(30);
+      }
+    }
+    @include u.breakpoint(large) {
+      padding: u.rem(30) u.rem(30);
+
+      section {
+        padding: u.rem(30) u.rem(36);
+      }
+    }
+    @include u.breakpoint(medium) {
+      header {
+        display: flex;
+        img {
+          width: 100%;
+          padding: u.rem(18);
+        }
+      }
+    }
+  }
+
+  @include u.breakpoint(xsmall) {
+    background: rgba(2, 146, 155, 0.14);
+    padding: u.rem(30) 0;
+
+    main {
+      background: transparent;
+      padding: 0 0;
+      border-radius: 0px;
+
+      header {
+        margin-bottom: 20px;
+
+        img {
+          padding: u.rem(16);
+        }
+      }
+    }
+  }
+}

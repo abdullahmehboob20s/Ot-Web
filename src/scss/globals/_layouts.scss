@@ -1,0 +1,52 @@
+@use "../utils" as u;
+
+.container-wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+
+  @include u.breakpoint(twoxLarge) {
+    width: 70%;
+  }
+  @include u.breakpoint(xLarge) {
+    width: 80%;
+  }
+  @include u.breakpoint(large) {
+    width: 90%;
+  }
+}
+.container-wrapper-2 {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
+  // border: 2px solid red;
+
+  @include u.breakpoint(twoxLarge) {
+    width: 80%;
+  }
+  @include u.breakpoint(small) {
+    width: 90%;
+  }
+}
+
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.w-fit-content {
+  width: fit-content;
+}
+.w-full {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex.align-center {
+  align-items: center;
+}
+.flex.justify-end {
+  justify-content: flex-end;
+}

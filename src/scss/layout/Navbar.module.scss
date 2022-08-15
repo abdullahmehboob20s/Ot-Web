@@ -1,0 +1,75 @@
+@use "../utils" as u;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: u.rem(50) 0;
+
+  .logo {
+    width: u.rem(464);
+  }
+
+  button {
+    padding: u.rem(18) u.rem(40);
+  }
+
+  @include u.breakpoint(twoxLarge) {
+    padding: u.rem(40) 0;
+
+    .logo {
+      width: u.rem(340);
+    }
+
+    button {
+      padding: u.rem(14) u.rem(30);
+    }
+  }
+
+  @include u.breakpoint(xLarge) {
+    padding: u.rem(30) 0;
+
+    .logo {
+      width: u.rem(260);
+    }
+
+    button {
+      padding: u.rem(10) u.rem(22);
+    }
+  }
+  @include u.breakpoint(large) {
+    padding: u.rem(26) 0;
+
+    .logo {
+      width: u.rem(260);
+    }
+
+    button {
+      padding: u.rem(8) u.rem(18);
+    }
+  }
+  @include u.breakpoint(small) {
+    padding: u.rem(26) 0;
+
+    .logo {
+      width: u.rem(200);
+    }
+
+    button {
+      padding: u.rem(8) u.rem(18);
+      font-size: u.rem(12);
+    }
+  }
+  @include u.breakpoint(xsmall) {
+    flex-direction: column;
+
+    .logo {
+      width: 80%;
+      max-width: u.rem(250);
+    }
+
+    & > :not(:last-child) {
+      margin-bottom: u.rem(16);
+    }
+  }
+}

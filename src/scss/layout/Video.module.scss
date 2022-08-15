@@ -1,0 +1,50 @@
+@use "../utils" as u;
+
+.wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    background: rgba(2, 146, 155, 0.14);
+    z-index: -1;
+  }
+
+  main {
+    max-width: u.rem(600);
+    margin: 0 auto;
+    background: #ffffff;
+    padding: u.rem(22);
+    border-radius: 12px;
+
+    video {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 12px;
+    }
+  }
+
+  @include u.breakpoint(twoxLarge) {
+    main {
+      max-width: u.rem(500);
+      padding: u.rem(18);
+    }
+  }
+  @include u.breakpoint(xLarge) {
+    main {
+      max-width: u.rem(360);
+      padding: u.rem(12);
+    }
+  }
+  @include u.breakpoint(large) {
+    main {
+      max-width: u.rem(400);
+      width: 100%;
+      padding: u.rem(16);
+    }
+  }
+}

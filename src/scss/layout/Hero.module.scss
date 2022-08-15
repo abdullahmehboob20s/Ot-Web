@@ -1,0 +1,71 @@
+@use "../utils" as u;
+
+.wrapper {
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      $size: u.rem(50);
+
+      font-size: $size;
+      width: $size;
+      fill: #02929b;
+    }
+
+    & > :not(:last-child) {
+      margin-right: u.rem(100);
+
+      @include u.breakpoint(twoxLarge) {
+        margin-right: u.rem(60);
+      }
+    }
+
+    @include u.breakpoint(twoxLarge) {
+      & > :not(:last-child) {
+        margin-right: u.rem(40);
+      }
+
+      .icon {
+        $size: u.rem(40);
+
+        font-size: $size;
+        width: $size;
+      }
+    }
+
+    @include u.breakpoint(xLarge) {
+      .icon {
+        $size: u.rem(34);
+        font-size: $size;
+        width: $size;
+      }
+
+      & > :not(:last-child) {
+        margin-right: u.rem(36);
+      }
+    }
+    @include u.breakpoint(medium) {
+      .icon {
+        $size: u.rem(30);
+        font-size: $size;
+        width: $size;
+      }
+
+      & > :not(:last-child) {
+        margin-right: u.rem(30);
+      }
+    }
+    @include u.breakpoint(small) {
+      .icon {
+        $size: u.rem(26);
+        font-size: $size;
+        width: $size;
+      }
+      & > :not(:last-child) {
+        margin-right: u.rem(20);
+      }
+    }
+  }
+}
