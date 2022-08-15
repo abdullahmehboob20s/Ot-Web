@@ -17,7 +17,11 @@ body {
   overflow-x: hidden;
 }
 
-.font-open-sans {
+.font-heading {
+  font-family: u.$font-secondary;
+}
+
+.font-secondary {
   font-family: u.$font-secondary;
 }
 
@@ -30,4 +34,8 @@ body {
 }
 .popup-hover-effect:hover {
   transform: translateY(-16%);
+}
+
+.border {
+  border: 2px solid red;
 }
