@@ -1,3 +1,4 @@
+@use "../globals/colors" as colors;
 @use "../utils" as u;
 
 * {
@@ -5,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: u.$font-main;
+  color: white;
 }
 
 :root {
@@ -13,8 +15,12 @@
 
 body {
   font-size: 100% !important;
-  background-color: white;
+  background-color: colors.$dark-blue;
   overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
 }
 
 .font-heading {
@@ -38,4 +44,13 @@ body {
 
 .border {
   border: 2px solid red;
+}
+
+.text-gradient {
+  // background: linear-gradient(120deg, red 50%, green 50%);
+  background: linear-gradient(140deg, white, #4987ff, #d6a0d7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

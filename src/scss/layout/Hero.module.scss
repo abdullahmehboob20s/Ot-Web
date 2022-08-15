@@ -1,0 +1,16 @@
+.heroWrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.heroWrapper section {
+  //   border: 2px solid red;
+  max-width: 40rem;
+}
+
+.buttons {
+  & > :not(:last-child) {
+    margin-right: 1.4rem;
+  }
+}

@@ -1,9 +1,10 @@
 /* COLORS */
 
-$pink: #f193b1;
+$pink: #ff49f8;
 $light-blue: #f5f6f8;
 $red: #ef233c;
 $green: #02929b;
+$dark-blue: #0d0a2c;
 
 .black {
   color: #000000;
@@ -19,6 +20,9 @@ $green: #02929b;
 }
 .green {
   color: $green;
+}
+.dark-blue {
+  color: $dark-blue;
 }
 
 // BACKGROUNDS
