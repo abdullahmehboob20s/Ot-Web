@@ -6,6 +6,7 @@ import RealWorld from "layouts/RealWorld";
 import Rewards from "layouts/Rewards";
 import PropertyOwnership from "layouts/PropertyOwnership";
 import Tokenomics from "layouts/Tokenomics";
+import Roadmap from "layouts/Roadmap";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
       </div>
       <div className="mb-200px">
         <Tokenomics />
+      </div>
+      <div className="mb-200px">
+        <Roadmap />
       </div>
     </div>
   );

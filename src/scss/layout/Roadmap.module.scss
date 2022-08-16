@@ -1,0 +1,43 @@
+@use "../utils" as u;
+
+.roadmapCards {
+  display: flex;
+  //   align-items: center;
+  justify-content: center;
+
+  & > div {
+    & > div:not(:last-child) {
+      margin-bottom: u.rem(150);
+    }
+  }
+
+  .right {
+    margin-top: u.rem(160);
+  }
+
+  & > :not(:last-child) {
+    margin-right: u.rem(124);
+  }
+}
+
+.stripe1 {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  right: 50%;
+  z-index: -10;
+}
+.stripe2 {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  left: 50%;
+  z-index: -10;
+}
+.stripe3 {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  right: 50%;
+  z-index: -10;
+}
