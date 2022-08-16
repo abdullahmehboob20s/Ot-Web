@@ -1,0 +1,38 @@
+@use "../utils" as u;
+
+.cardsWrapper {
+  position: relative;
+  padding: 4rem;
+  border-radius: u.rem(22);
+  overflow: hidden;
+  background: linear-gradient(120deg, white, #4987ff, #e064e3);
+  padding: 0.2rem;
+}
+
+.cards {
+  height: 100%;
+  width: 100%;
+  background: #120e45;
+  padding: u.rem(32) u.rem(50);
+  border-radius: u.rem(22);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > img {
+    width: 19%;
+  }
+
+  //   & > img:nth-child(1) {
+  //     width: 13.2rem;
+  //   }
+  //   & > img:nth-child(2) {
+  //     width: 13.2rem;
+  //   }
+  //   & > img:nth-child(3) {
+  //     width: 13.2rem;
+  //   }
+  //   & > img:nth-child(4) {
+  //     width: 13.4rem;
+  //   }
+}
