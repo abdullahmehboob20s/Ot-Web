@@ -5,6 +5,7 @@ import LookAtPerson from "layouts/LookAtPerson";
 import RealWorld from "layouts/RealWorld";
 import Rewards from "layouts/Rewards";
 import PropertyOwnership from "layouts/PropertyOwnership";
+import Tokenomics from "layouts/Tokenomics";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
       </div>
       <div className="mb-200px">
         <PropertyOwnership />
+      </div>
+      <div className="mb-200px">
+        <Tokenomics />
       </div>
     </div>
   );

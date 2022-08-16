@@ -7,7 +7,7 @@ function PropertyOwnership() {
     <div className={styles.containerWrapper}>
       <img src={banner} alt="" className={styles.banner} />
 
-      <div className="container-wrapper">
+      <div className="container-wrapper-2">
         <div className={styles.container}>
           <header className="mb-55px">
             <h1 className="font-heading text-gradient fs-48px weight-7 uppercase mb-15px">
