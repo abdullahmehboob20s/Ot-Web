@@ -1,0 +1,15 @@
+@use "../utils" as u;
+
+.wrapper {
+  header {
+    max-width: u.rem(929);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      max-width: u.rem(720);
+    }
+  }
+}
