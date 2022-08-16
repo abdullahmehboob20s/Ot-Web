@@ -9,6 +9,7 @@ import Tokenomics from "layouts/Tokenomics";
 import Roadmap from "layouts/Roadmap";
 import Team from "layouts/Team";
 import Calculator from "layouts/Calculator";
+import Partners from "layouts/Partners";
 
 function App() {
   return (
@@ -45,6 +46,9 @@ function App() {
       </div>
       <div className="mb-100px">
         <Calculator />
+      </div>
+      <div className="mb-200px">
+        <Partners />
       </div>
     </div>
   );
