@@ -1,7 +1,7 @@
 import AsSeen from "layouts/AsSeen";
 import Hero from "layouts/Hero";
 import RealWorld from "layouts/RealWorld";
-import React from "react";
+import Rewards from "layouts/Rewards";
 
 function App() {
   return (
@@ -12,8 +12,11 @@ function App() {
       <div className="mb-200px">
         <AsSeen />
       </div>
-      <div className="mb-100px">
+      <div className="mb-200px">
         <RealWorld />
+      </div>
+      <div className="mb-200px">
+        <Rewards />
       </div>
     </div>
   );

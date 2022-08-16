@@ -1,0 +1,21 @@
+@use "../utils" as u;
+
+.container {
+  position: relative;
+  z-index: 1;
+  background-color: #0d0a2c;
+  padding: u.rem(100) u.rem(58);
+  border-radius: u.rem(28);
+  background-image: url(../../assets/images/rewards/bg.png);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  main {
+    display: flex;
+
+    & > :not(:last-child) {
+      margin-right: u.rem(40);
+    }
+  }
+}
