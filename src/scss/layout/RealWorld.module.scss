@@ -1,0 +1,25 @@
+@use "../utils" as u;
+
+.wrapper {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      max-width: u.rem(804);
+    }
+
+    p {
+      max-width: u.rem(684);
+    }
+  }
+
+  main {
+    display: flex;
+
+    & > :not(:last-child) {
+      margin-right: u.rem(80);
+    }
+  }
+}
