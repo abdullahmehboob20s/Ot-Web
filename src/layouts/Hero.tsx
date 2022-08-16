@@ -1,9 +1,12 @@
 import Button from "components/Button";
 import styles from "scss/layout/Hero.module.scss";
 
+import banner from "assets/images/hero/hero-building.png";
+
 function Hero() {
   return (
     <div className={styles.heroWrapper}>
+      <img src={banner} className={styles.banner} alt="" />
       <div className="container-wrapper-2">
         <section>
           <h1 className="font-heading fs-64px mb-20px lh-1_2">
