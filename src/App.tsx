@@ -4,6 +4,7 @@ import Hero from "layouts/Hero";
 import LookAtPerson from "layouts/LookAtPerson";
 import RealWorld from "layouts/RealWorld";
 import Rewards from "layouts/Rewards";
+import PropertyOwnership from "layouts/PropertyOwnership";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
       </div>
       <div className="mb-200px">
         <LookAtPerson />
+      </div>
+      <div className="mb-200px">
+        <PropertyOwnership />
       </div>
     </div>
   );
