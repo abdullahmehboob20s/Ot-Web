@@ -1,0 +1,55 @@
+@use "../utils" as u;
+
+.wrapper {
+  background: linear-gradient(90deg, #ffffff, #4987ff, #e064e3);
+  border-radius: u.rem(22);
+  padding: 0.16em;
+
+  & > main {
+    padding: u.rem(70) u.rem(88);
+    background: #120e45;
+    border-radius: u.rem(22);
+    width: 100%;
+    height: 100%;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      header {
+        max-width: u.rem(556);
+        width: 100%;
+
+        & > :not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .cards {
+        display: flex;
+        width: 100%;
+
+        & > :not(:last-child) {
+          margin-right: 2.1rem;
+        }
+      }
+
+      footer {
+        width: 100%;
+        max-width: u.rem(556);
+
+        button {
+          width: 100%;
+          padding: 1rem;
+          background: linear-gradient(
+            93.02deg,
+            #246dfc -108.57%,
+            #4987ff 122.34%
+          );
+          border-radius: u.rem(17);
+        }
+      }
+    }
+  }
+}

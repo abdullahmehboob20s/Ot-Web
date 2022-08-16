@@ -8,6 +8,7 @@ import PropertyOwnership from "layouts/PropertyOwnership";
 import Tokenomics from "layouts/Tokenomics";
 import Roadmap from "layouts/Roadmap";
 import Team from "layouts/Team";
+import Calculator from "layouts/Calculator";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
       </div>
       <div className="mb-200px">
         <Team />
+      </div>
+      <div className="mb-100px">
+        <Calculator />
       </div>
     </div>
   );

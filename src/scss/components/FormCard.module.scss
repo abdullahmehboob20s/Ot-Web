@@ -1,0 +1,18 @@
+@use "../utils" as u;
+@use "../globals/colors" as colors;
+
+.cardWrapper {
+  background: linear-gradient(90deg, #ffffff, #4987ff, #e064e3);
+  border-radius: u.rem(19);
+  padding: 0.1rem;
+  flex: 1;
+
+  .card {
+    width: 100%;
+    height: 100%;
+    border-radius: u.rem(19);
+    background: linear-gradient(21.84deg, #002e8a -53.71%, #0d0a2c 73.03%);
+    background: colors.$dark-blue;
+    padding: u.rem(24);
+  }
+}
