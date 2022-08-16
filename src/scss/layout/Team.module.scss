@@ -1,0 +1,19 @@
+@use "../utils/" as u;
+
+.wrapper {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      max-width: u.rem(819);
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: u.rem(44);
+  }
+}

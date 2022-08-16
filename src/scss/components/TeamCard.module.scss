@@ -1,0 +1,41 @@
+@use "../utils/" as u;
+
+.card {
+  background: linear-gradient(
+    146.82deg,
+    rgba(73, 135, 255, 0.12) 8.98%,
+    rgba(163, 148, 255, 0.0144) 74.98%
+  );
+  box-shadow: inset -0.5px -0.5px 0px rgba(255, 255, 255, 0.08);
+  border-radius: u.rem(20);
+  padding: u.rem(36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  main {
+    height: 12.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .teamMemberImg {
+    width: 9rem;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 1.2rem;
+    }
+
+    & > :not(:last-child) {
+      margin-right: 1.2rem;
+    }
+  }
+}
