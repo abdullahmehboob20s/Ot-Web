@@ -1,3 +1,4 @@
+import AboutUs from "layouts/AboutUs";
 import AsSeen from "layouts/AsSeen";
 import Hero from "layouts/Hero";
 import RealWorld from "layouts/RealWorld";
@@ -17,6 +18,9 @@ function App() {
       </div>
       <div className="mb-200px">
         <Rewards />
+      </div>
+      <div className="mb-200px">
+        <AboutUs />
       </div>
     </div>
   );
