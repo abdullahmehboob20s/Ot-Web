@@ -15,7 +15,7 @@ import Navbar from "layouts/Navbar";
 
 function App() {
   return (
-    <div>
+    <div id="home">
       <Navbar />
       <div className="mb-50px">
         <Hero />
@@ -29,7 +29,7 @@ function App() {
       <div className="mb-200px">
         <Rewards />
       </div>
-      <div className="mb-200px">
+      <div className="mb-200px" id="aboutus">
         <AboutUs />
       </div>
       <div className="mb-200px">
@@ -38,16 +38,16 @@ function App() {
       <div className="mb-200px">
         <PropertyOwnership />
       </div>
-      <div className="mb-200px">
+      <div className="mb-200px" id="tokenomics">
         <Tokenomics />
       </div>
-      <div className="mb-200px">
+      <div className="mb-200px" id="roadmap">
         <Roadmap />
       </div>
       <div className="mb-200px">
         <Team />
       </div>
-      <div className="mb-100px">
+      <div className="mb-100px" id="calculator">
         <Calculator />
       </div>
       <div className="mb-200px">

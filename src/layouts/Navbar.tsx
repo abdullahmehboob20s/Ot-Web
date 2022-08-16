@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "scss/layout/Navbar.module.scss";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -24,24 +25,44 @@ function Navbar() {
           <p className="fs-14px white weight-5">logo placeholder</p>
 
           <div className={styles.links}>
-            <a href="#" className="fs-14px white weight-5">
+            <Link to="home" className="fs-14px white weight-5 pointer">
               Home
-            </a>
-            <a href="#" className="fs-14px white weight-5">
+            </Link>
+            <Link
+              to="aboutus"
+              className="fs-14px white weight-5 pointer"
+              offset={-160}
+            >
               About Us
-            </a>
-            <a href="#" className="fs-14px white weight-5">
+            </Link>
+            <Link
+              to="tokenomics"
+              className="fs-14px white weight-5 pointer"
+              offset={-160}
+            >
               Tokenomics
-            </a>
-            <a href="#" className="fs-14px white weight-5">
+            </Link>
+            <Link
+              to="faq"
+              className="fs-14px white weight-5 pointer"
+              offset={-160}
+            >
               Faq
-            </a>
-            <a href="#" className="fs-14px white weight-5">
+            </Link>
+            <Link
+              to="calculator"
+              className="fs-14px white weight-5 pointer"
+              offset={-160}
+            >
               Calculator
-            </a>
-            <a href="#" className="fs-14px white weight-5">
+            </Link>
+            <Link
+              to="roadmap"
+              className="fs-14px white weight-5 pointer"
+              offset={-160}
+            >
               Roadmap
-            </a>
+            </Link>
           </div>
         </main>
       </div>
