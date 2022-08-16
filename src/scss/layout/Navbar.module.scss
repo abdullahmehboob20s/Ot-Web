@@ -1,0 +1,32 @@
+@use "../utils" as u;
+@use "../globals/colors" as colors;
+
+.navbar {
+  border-bottom: 0.5px solid transparent;
+  padding: u.rem(28) 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.2s ease;
+  z-index: 99;
+
+  &.scrolled {
+    background-color: colors.$dark-blue;
+    border-bottom: 0.5px solid #ffffff;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .links {
+      display: flex;
+      align-items: center;
+      & > :not(:last-child) {
+        margin-right: u.rem(50);
+      }
+    }
+  }
+}

@@ -11,10 +11,12 @@ import Team from "layouts/Team";
 import Calculator from "layouts/Calculator";
 import Partners from "layouts/Partners";
 import Footer from "layouts/Footer";
+import Navbar from "layouts/Navbar";
 
 function App() {
   return (
     <div>
+      <Navbar />
       <div className="mb-50px">
         <Hero />
       </div>
