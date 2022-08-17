@@ -45,12 +45,17 @@ function Navbar() {
             >
               <IoClose color="white" />
             </button>
-            <Link to="home" className="fs-14px white weight-5 pointer">
+            <Link
+              to="home"
+              className="fs-14px white weight-5 pointer"
+              onClick={() => setIsSidebarOpen(false)}
+            >
               Home
             </Link>
             <Link
               to="aboutus"
               className="fs-14px white weight-5 pointer"
+              onClick={() => setIsSidebarOpen(false)}
               offset={-160}
             >
               About Us
@@ -58,6 +63,7 @@ function Navbar() {
             <Link
               to="tokenomics"
               className="fs-14px white weight-5 pointer"
+              onClick={() => setIsSidebarOpen(false)}
               offset={-160}
             >
               Tokenomics
@@ -65,6 +71,7 @@ function Navbar() {
             <Link
               to="faq"
               className="fs-14px white weight-5 pointer"
+              onClick={() => setIsSidebarOpen(false)}
               offset={-160}
             >
               Faq
@@ -72,6 +79,7 @@ function Navbar() {
             <Link
               to="calculator"
               className="fs-14px white weight-5 pointer"
+              onClick={() => setIsSidebarOpen(false)}
               offset={-160}
             >
               Calculator
@@ -79,6 +87,7 @@ function Navbar() {
             <Link
               to="roadmap"
               className="fs-14px white weight-5 pointer"
+              onClick={() => setIsSidebarOpen(false)}
               offset={-160}
             >
               Roadmap
