@@ -10,6 +10,7 @@
     transform: translateY(-50%);
     width: 26%;
     max-width: u.rem(400);
+    z-index: -10;
   }
 
   .container {
@@ -24,6 +25,18 @@
       max-width: u.rem(760);
       display: grid;
       gap: u.rem(48);
+    }
+  }
+
+  @include u.breakpoint(large) {
+    .banner {
+      display: none;
+    }
+
+    .container {
+      main {
+        gap: u.rem(24);
+      }
     }
   }
 }

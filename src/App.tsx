@@ -32,13 +32,13 @@ function App() {
       <div className="mb-200px" id="aboutus">
         <AboutUs />
       </div>
-      {/* <div className="mb-200px">
+      <div className="mb-200px">
         <LookAtPerson />
       </div>
       <div className="mb-200px">
         <PropertyOwnership />
       </div>
-      <div className="mb-200px" id="tokenomics">
+      {/* <div className="mb-200px" id="tokenomics">
         <Tokenomics />
       </div>
       <div className="mb-200px" id="roadmap">

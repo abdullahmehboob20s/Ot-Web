@@ -15,3 +15,10 @@
     max-width: u.rem(417);
   }
 }
+
+@include u.breakpoint(large) {
+  .card {
+    padding: u.rem(24) u.rem(32);
+    border-radius: u.rem(10);
+  }
+}
