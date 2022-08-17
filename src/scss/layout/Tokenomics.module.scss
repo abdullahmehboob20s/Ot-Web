@@ -37,6 +37,17 @@
       pointer-events: none;
     }
   }
+
+  .pieChart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .card {
@@ -56,5 +67,18 @@
     transform: translateY(-50%);
     border: 1px solid rgba(255, 255, 255, 0.8);
     width: 3rem;
+  }
+}
+
+@include u.breakpoint(medium) {
+  .wrapper {
+    min-height: 72vw !important;
+    padding-top: 1.8rem;
+  }
+}
+
+@include u.breakpoint(xsmall) {
+  .wrapper {
+    min-height: 85vw !important;
   }
 }

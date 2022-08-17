@@ -1,1 +1,37 @@
+@use "./utils/" as u;
 @forward "globals";
+
+.recharts-wrapper {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recharts-surface {
+  overflow: visible;
+  // border: 2px solid red;
+  width: 100% !important;
+  height: 30vw !important;
+}
+
+.anchorTitle {
+  // font-size: 1.1vw !important;
+  font-size: 1rem;
+}
+
+.anchorSubtitle {
+  // font-size: 1vw !important;
+  font-size: 0.8rem;
+}
+
+@include u.breakpoint(medium) {
+  .recharts-surface {
+    height: 38vw !important;
+  }
+}
