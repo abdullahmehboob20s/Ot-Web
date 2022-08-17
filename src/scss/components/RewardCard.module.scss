@@ -24,4 +24,17 @@
       width: 47.4%;
     }
   }
+
+  @include u.breakpoint(large) {
+    padding: u.rem(22) u.rem(24);
+
+    .imgBox {
+      width: u.rem(70);
+      height: u.rem(70);
+    }
+  }
+
+  @include u.breakpoint(xsmall) {
+    border-radius: u.rem(10);
+  }
 }

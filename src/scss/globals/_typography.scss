@@ -283,6 +283,7 @@ a {
     --fs-64px: #{u.rem(44)};
     --fs-24px: #{u.rem(20)};
     --fs-48px: #{u.rem(34)};
+    --fs-16px: #{u.rem(14)};
   }
 }
 @include u.breakpoint(small) {

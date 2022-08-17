@@ -8,7 +8,7 @@ import icon4 from "assets/images/rewards/wallet.png";
 
 function Rewards() {
   return (
-    <div>
+    <div className={styles.containerWrapper}>
       <div className={`${styles.container} container-wrapper`}>
         <header className="mb-50px">
           <h1 className="font-heading text-gradient text-center fs-48px mb-20px">

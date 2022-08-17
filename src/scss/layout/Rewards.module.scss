@@ -1,21 +1,49 @@
 @use "../utils" as u;
 
-.container {
-  position: relative;
-  z-index: 1;
-  background-color: #0d0a2c;
-  padding: u.rem(100) u.rem(58);
-  border-radius: u.rem(28);
-  background-image: url(../../assets/images/rewards/bg.png);
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-  background-size: cover;
+.containerWrapper {
+  .container {
+    position: relative;
+    z-index: 1;
+    background-color: #0d0a2c;
+    padding: u.rem(100) u.rem(58);
+    border-radius: u.rem(28);
+    background-image: url(../../assets/images/rewards/bg.png);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-  main {
-    display: flex;
+    main {
+      display: flex;
 
-    & > :not(:last-child) {
-      margin-right: u.rem(40);
+      & > :not(:last-child) {
+        margin-right: u.rem(40);
+      }
+    }
+  }
+
+  @include u.breakpoint(large) {
+    background-color: #0d0a2c;
+    background-image: url(../../assets/images/rewards/bg.png);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+      padding: u.rem(80) u.rem(0);
+      background-image: none;
+      background-color: transparent;
+
+      main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        max-width: 36rem;
+        margin: 0 auto;
+
+        & > :not(:last-child) {
+          margin-right: u.rem(0);
+        }
+      }
     }
   }
 }
