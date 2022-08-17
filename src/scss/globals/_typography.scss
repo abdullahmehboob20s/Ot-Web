@@ -281,11 +281,15 @@ a {
 @include u.breakpoint(large) {
   :root {
     --fs-64px: #{u.rem(44)};
+    --fs-24px: #{u.rem(20)};
+    --fs-48px: #{u.rem(34)};
   }
 }
 @include u.breakpoint(small) {
   :root {
     --fs-64px: #{u.rem(30)};
     --fs-14px: #{u.rem(12)};
+    --fs-24px: #{u.rem(18)};
+    --fs-48px: #{u.rem(22)};
   }
 }

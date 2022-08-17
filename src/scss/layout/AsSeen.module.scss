@@ -36,3 +36,17 @@
   //     width: 13.4rem;
   //   }
 }
+
+@include u.breakpoint(small) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 0;
+    place-items: center;
+    padding: u.rem(32) u.rem(16);
+
+    & > img {
+      width: 80%;
+    }
+  }
+}
