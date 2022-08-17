@@ -44,6 +44,7 @@ function TeamCard({
           href={twitterLink ? twitterLink : "/"}
           target="_blank"
           rel="noreferrer"
+          className="flex"
         >
           <img src={twitterIcon} alt="" />
         </a>
@@ -51,6 +52,7 @@ function TeamCard({
           href={linkdenLink ? linkdenLink : "/"}
           target="_blank"
           rel="noreferrer"
+          className="flex"
         >
           <img src={linkedinIcon} alt="" />
         </a>

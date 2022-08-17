@@ -16,4 +16,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: u.rem(44);
   }
+
+  @include u.breakpoint(large) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: u.rem(20);
+    }
+  }
+  @include u.breakpoint(small) {
+    .cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }

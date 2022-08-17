@@ -44,10 +44,10 @@ function App() {
       <div className="mb-200px" id="roadmap">
         <Roadmap />
       </div>
-      {/* <div className="mb-200px">
+      <div className="mb-200px">
         <Team />
       </div>
-      <div className="mb-100px" id="calculator">
+      {/* <div className="mb-100px" id="calculator">
         <Calculator />
       </div>
       <div className="mb-200px">
