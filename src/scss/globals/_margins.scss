@@ -99,3 +99,12 @@
 .mt-120px {
   margin-top: u.rem(120);
 }
+
+@include u.breakpoint(medium) {
+  .mb-200px {
+    margin-bottom: u.rem(90);
+  }
+  .mb-100px {
+    margin-bottom: u.rem(60);
+  }
+}

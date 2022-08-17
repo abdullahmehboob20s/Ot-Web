@@ -39,6 +39,10 @@
 }
 
 @include u.breakpoint(medium) {
+  .heroWrapper {
+    min-height: auto;
+    padding-top: 7rem;
+  }
   .banner {
     top: 10%;
     width: 80%;
