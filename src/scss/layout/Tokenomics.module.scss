@@ -78,7 +78,24 @@
 }
 
 @include u.breakpoint(xsmall) {
+  .containerWrapper {
+    box-shadow: inset -0.5px -0.5px 0px rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(44px);
+    border: 2px solid white;
+    border-left: none;
+    border-right: none;
+    background: linear-gradient(
+      67.84deg,
+      rgba(104, 45, 140, 0.1) -1.82%,
+      rgba(235, 30, 121, 0.1) 106.59%
+    );
+  }
   .wrapper {
     min-height: 85vw !important;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    border: none;
+    padding: 2rem 0;
   }
 }

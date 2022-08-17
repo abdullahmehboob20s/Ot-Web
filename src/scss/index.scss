@@ -35,3 +35,13 @@
     height: 38vw !important;
   }
 }
+
+@include u.breakpoint(xsmall) {
+  .anchorTitle {
+    font-size: 1.6rem;
+  }
+
+  .anchorSubtitle {
+    font-size: 1rem;
+  }
+}

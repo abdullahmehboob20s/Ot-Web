@@ -1,7 +1,9 @@
 import React from "react";
 import { Sector } from "recharts";
+import useMediaQuery from "hooks/useMediaQuery";
 
-const renderActiveShape = (props: any) => {
+const RenderActiveShape = (props: any) => {
+  const isBellow700px = useMediaQuery("(max-width : 700px)");
   const RADIAN = Math.PI / 180;
   const {
     cx,
@@ -35,17 +37,17 @@ const renderActiveShape = (props: any) => {
           dy={-16}
           textAnchor="middle"
           fill={"white"}
-          className="fs-14px"
+          className={`${isBellow700px ? "fs-22px" : "fs-14px"} `}
         >
           Total Supply
         </text>
         <text
           x={cx}
           y={cy}
-          dy={8 + 13}
+          dy={isBellow700px ? 8 + 20 : 8 + 13}
           textAnchor="middle"
           fill={"white"}
-          className="fs-24px weight-7"
+          className={`${isBellow700px ? "fs-30px" : "fs-24px"} weight-7`}
         >
           {payload.name}
         </text>
@@ -100,4 +102,4 @@ const renderActiveShape = (props: any) => {
   );
 };
 
-export default renderActiveShape;
+export default RenderActiveShape;

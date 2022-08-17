@@ -1,7 +1,7 @@
 import styles from "scss/layout/Tokenomics.module.scss";
 import { PieChart, Pie, Cell } from "recharts";
 import { useCallback, useState } from "react";
-import renderActiveShape from "components/renderActiveShape";
+import RenderActiveShape from "components/RenderActiveShape";
 
 const data = [
   { name: "100%", value: 400, color: "#EABDB4" },
@@ -24,33 +24,34 @@ function Tokenomics() {
     [setActiveIndex]
   );
   return (
-    <div className="container-wrapper">
-      <div className={styles.wrapper}>
-        <h1 className="fs-48px text-gradient font-heading uppercase text-center">
-          TOKENOMICS
-        </h1>
+    <div className={styles.containerWrapper}>
+      <div className="container-wrapper">
+        <div className={styles.wrapper}>
+          <h1 className="fs-48px text-gradient font-heading uppercase text-center">
+            TOKENOMICS
+          </h1>
 
-        <PieChart width={400} height={400}>
-          <Pie
-            activeIndex={activeIndex}
-            activeShape={renderActiveShape}
-            data={data}
-            cx={200}
-            cy={200}
-            innerRadius={150}
-            outerRadius={180}
-            fill="#8884d8"
-            dataKey="value"
-            onMouseEnter={onPieEnter}
-            paddingAngle={3}
-          >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={entry.color} />
-            ))}
-          </Pie>
-        </PieChart>
+          <PieChart width={400} height={400}>
+            <Pie
+              activeIndex={activeIndex}
+              activeShape={<RenderActiveShape />}
+              data={data}
+              cx={200}
+              cy={200}
+              innerRadius={150}
+              outerRadius={180}
+              fill="#8884d8"
+              dataKey="value"
+              onMouseEnter={onPieEnter}
+              paddingAngle={3}
+            >
+              {data.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={entry.color} />
+              ))}
+            </Pie>
+          </PieChart>
 
-        {/* <div className={styles.chart}>
+          {/* <div className={styles.chart}>
           <>
             <img src={chart} className={styles.chartImage} alt="" />
             <p className="fs-14px weight-5 white text-center mb-10px">
@@ -68,6 +69,7 @@ function Tokenomics() {
             </p>
           </div>
         </div> */}
+        </div>
       </div>
     </div>
   );
