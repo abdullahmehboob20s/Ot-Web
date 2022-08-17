@@ -1,6 +1,6 @@
 import styles from "scss/layout/Tokenomics.module.scss";
 import { PieChart, Pie, Cell } from "recharts";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import RenderActiveShape from "components/RenderActiveShape";
 
 const data = [
@@ -15,8 +15,24 @@ const data = [
   { name: "100%", value: 100, color: "#EA862E" },
 ];
 
+// const RenderActiveShapeWrapper = ({
+//   wrapperProps,
+//   stateProps,
+// }: {
+//   wrapperProps: any;
+//   stateProps: any;
+// }) => {
+//   useEffect(() => {
+//     stateProps(wrapperProps);
+//   }, []);
+//   return <RenderActiveShape {...wrapperProps} />;
+// };
+
 function Tokenomics() {
+  const [shapeProps, setShapeProps] = useState<any>({});
   const [activeIndex, setActiveIndex] = useState(0);
+  const RADIAN = Math.PI / 180;
+  const cos = Math.cos(-RADIAN * shapeProps?.midAngle);
   const onPieEnter = useCallback(
     (_: any, index: any) => {
       setActiveIndex(index);
@@ -31,10 +47,29 @@ function Tokenomics() {
             TOKENOMICS
           </h1>
 
+          {/* <p
+            style={{
+              position: "absolute",
+              top: `${shapeProps?.ex + (cos >= 0 ? 1 : -1) * 12}%` ,
+              left: ,
+              transform: `translateX(${
+                
+              }%) translateY(${shapeProps?.ey}%)`,
+            }}
+          >
+            h1
+          </p> */}
+
           <PieChart width={400} height={400}>
             <Pie
               activeIndex={activeIndex}
-              activeShape={<RenderActiveShape />}
+              activeShape={(props) => (
+                // <RenderActiveShapeWrapper
+                //   wrapperProps={props}
+                //   stateProps={setShapeProps}
+                // />
+                <RenderActiveShape {...props} />
+              )}
               data={data}
               cx={200}
               cy={200}
