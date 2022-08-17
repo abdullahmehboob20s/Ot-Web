@@ -27,7 +27,7 @@ function AboutUs() {
           <img src={soldier} alt="" />
 
           <div>
-            <blockquote className="text-gradient-2 fs-14px italic weight-6 text-center">
+            <blockquote className="text-gradient-2 fs-14px italic weight-6 text-center mb-15px">
               “ OUR goals are to help people climb onto the property ladder,
               reduce global homelessness, poverty and return the power to you,
               the people. ”

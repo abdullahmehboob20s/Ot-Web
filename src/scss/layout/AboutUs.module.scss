@@ -46,4 +46,31 @@
       margin-right: u.rem(50);
     }
   }
+
+  @include u.breakpoint(medium) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+      max-width: 20rem;
+
+      & > :not(:last-child) {
+        margin-right: u.rem(0);
+        margin-bottom: u.rem(20);
+      }
+    }
+  }
+
+  @include u.breakpoint(small) {
+    & > :not(:last-child) {
+      margin-bottom: u.rem(30);
+    }
+
+    footer {
+      max-width: 18rem;
+
+      & > img {
+        max-width: 5rem;
+      }
+    }
+  }
 }

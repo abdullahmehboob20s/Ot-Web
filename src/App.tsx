@@ -29,10 +29,10 @@ function App() {
       <div className="mb-200px">
         <Rewards />
       </div>
-      {/* <div className="mb-200px" id="aboutus">
+      <div className="mb-200px" id="aboutus">
         <AboutUs />
       </div>
-      <div className="mb-200px">
+      {/* <div className="mb-200px">
         <LookAtPerson />
       </div>
       <div className="mb-200px">
