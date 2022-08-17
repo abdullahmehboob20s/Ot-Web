@@ -20,7 +20,7 @@ function App() {
       <div className="mb-50px">
         <Hero />
       </div>
-      <div className="mb-200px">
+      {/* <div className="mb-200px">
         <AsSeen />
       </div>
       <div className="mb-200px">
@@ -55,7 +55,7 @@ function App() {
       </div>
       <div>
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,3 +1,5 @@
+@use "../utils" as u;
+
 .heroWrapper {
   min-height: 100vh;
   display: flex;
@@ -21,5 +23,29 @@
 .buttons {
   & > :not(:last-child) {
     margin-right: 1.4rem;
+  }
+}
+
+@include u.breakpoint(large) {
+  .heroWrapper section {
+    max-width: 26rem;
+  }
+
+  .buttons {
+    & > :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@include u.breakpoint(medium) {
+  .banner {
+    top: 10%;
+    width: 80%;
+  }
+}
+@include u.breakpoint(small) {
+  .heroWrapper section {
+    max-width: 20rem;
   }
 }
