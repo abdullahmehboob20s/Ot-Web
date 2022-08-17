@@ -1,6 +1,5 @@
 import styles from "scss/layout/Tokenomics.module.scss";
-import chart from "assets/images/tokenomics/chart.svg";
-import { PieChart, Pie, Sector, Tooltip, Cell } from "recharts";
+import { PieChart, Pie, Cell } from "recharts";
 import { useCallback, useState } from "react";
 import renderActiveShape from "components/renderActiveShape";
 
