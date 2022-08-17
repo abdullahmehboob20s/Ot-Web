@@ -16,7 +16,7 @@
 body {
   font-size: 100% !important;
   background-color: colors.$dark-blue;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   position: relative;
   z-index: 1;
 
