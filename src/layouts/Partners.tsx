@@ -9,16 +9,24 @@ function Partners() {
       </h1>
 
       <main className={styles.partners}>
-        <p className="font-heading white opacity-0_4 uppercase fs-24px">
+        <p
+          className={`${styles.card} font-heading white opacity-0_4 uppercase fs-24px`}
+        >
           Reflex Finance
         </p>
-        <p className="font-heading white opacity-0_4 uppercase fs-24px">
+        <p
+          className={`${styles.card} font-heading white opacity-0_4 uppercase fs-24px`}
+        >
           EVERRISE
         </p>
-        <p className="font-heading white opacity-0_4 uppercase fs-24px">
+        <p
+          className={`${styles.card} font-heading white opacity-0_4 uppercase fs-24px`}
+        >
           NEWTON MINT LABS
         </p>
-        <p className="font-heading white opacity-0_4 uppercase fs-24px">
+        <p
+          className={`${styles.card} font-heading white opacity-0_4 uppercase fs-24px`}
+        >
           GREEDY GRAMPS
         </p>
       </main>

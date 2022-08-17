@@ -50,10 +50,10 @@ function App() {
       <div className="mb-100px" id="calculator">
         <Calculator />
       </div>
-      {/* <div className="mb-200px">
+      <div className="mb-200px">
         <Partners />
       </div>
-      <div>
+      {/* <div>
         <Footer />
       </div> */}
     </div>
