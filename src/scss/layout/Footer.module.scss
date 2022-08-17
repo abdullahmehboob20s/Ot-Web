@@ -48,3 +48,42 @@
     }
   }
 }
+
+@include u.breakpoint(large) {
+  .wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .footer {
+    main {
+      grid-template-columns: 0.8fr 0.5fr 0.5fr;
+      margin-bottom: u.rem(60);
+    }
+  }
+}
+@include u.breakpoint(small) {
+  .footer {
+    main {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: u.rem(60);
+    }
+  }
+}
+@include u.breakpoint(xsmall) {
+  .wrapper {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer {
+    main {
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: u.rem(60);
+
+      & > div {
+        grid-column: 1/-1;
+      }
+    }
+  }
+}

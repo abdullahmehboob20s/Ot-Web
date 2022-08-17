@@ -53,9 +53,9 @@ function App() {
       <div className="mb-200px">
         <Partners />
       </div>
-      {/* <div>
+      <div>
         <Footer />
-      </div> */}
+      </div>
     </div>
   );
 }
