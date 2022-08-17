@@ -1,53 +1,124 @@
 @use "../utils" as u;
 
-.wrapper {
-  background: linear-gradient(90deg, #ffffff, #4987ff, #e064e3);
-  border-radius: u.rem(22);
-  padding: 0.16em;
-
-  & > main {
-    padding: u.rem(70) u.rem(88);
-    background: #120e45;
+.containerWrapper {
+  .wrapper {
+    background: linear-gradient(90deg, #ffffff, #4987ff, #e064e3);
     border-radius: u.rem(22);
-    width: 100%;
-    height: 100%;
+    padding: 0.16em;
 
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    & > main {
+      padding: u.rem(70) u.rem(88);
+      background: #120e45;
+      border-radius: u.rem(22);
+      width: 100%;
+      height: 100%;
 
-      header {
-        max-width: u.rem(556);
-        width: 100%;
-
-        & > :not(:last-child) {
-          margin-bottom: 2rem;
-        }
-      }
-
-      .cards {
+      form {
         display: flex;
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
 
-        & > :not(:last-child) {
-          margin-right: 2.1rem;
+        header {
+          max-width: u.rem(556);
+          width: 100%;
+
+          & > :not(:last-child) {
+            margin-bottom: 2rem;
+          }
+        }
+
+        .cards {
+          display: flex;
+          width: 100%;
+
+          & > :not(:last-child) {
+            margin-right: 2.1rem;
+          }
+        }
+
+        footer {
+          width: 100%;
+          max-width: u.rem(556);
+
+          button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(
+              93.02deg,
+              #246dfc -108.57%,
+              #4987ff 122.34%
+            );
+            border-radius: u.rem(17);
+          }
         }
       }
+    }
+  }
 
-      footer {
-        width: 100%;
-        max-width: u.rem(556);
+  @include u.breakpoint(large) {
+    background: linear-gradient(90deg, #ffffff, #4987ff, #e064e3);
+    border-radius: u.rem(0);
+    padding: 0.16em;
+    position: relative;
+    z-index: 1;
 
-        button {
-          width: 100%;
-          padding: 1rem;
-          background: linear-gradient(
-            93.02deg,
-            #246dfc -108.57%,
-            #4987ff 122.34%
-          );
-          border-radius: u.rem(17);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 99%;
+      background: #120e45;
+      z-index: -10;
+    }
+
+    .wrapper {
+      background: none;
+      padding: 0em;
+      width: 100%;
+      height: 100%;
+
+      & > main {
+        background: transparent;
+        padding: u.rem(70) u.rem(0);
+
+        form {
+          .cards {
+            display: flex;
+            width: 100%;
+
+            & > :not(:last-child) {
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include u.breakpoint(medium) {
+    .wrapper {
+      & > main {
+        form {
+          header {
+            max-width: u.rem(556);
+            width: 100%;
+
+            & > :not(:last-child) {
+              margin-bottom: 1.4rem;
+            }
+          }
+
+          .cards {
+            display: grid;
+            gap: 1rem;
+
+            & > :not(:last-child) {
+              margin-right: 0;
+            }
+          }
         }
       }
     }
