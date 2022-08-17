@@ -15,8 +15,7 @@ interface Props {
 const Point = ({ point }: PointProps) => {
   return (
     <p className={`${styles.point} fs-12px white weight-4`}>
-      {" "}
-      <span className={styles.circle}></span> {point}
+      <span className={`${styles.circle}`}></span> {point}
     </p>
   );
 };

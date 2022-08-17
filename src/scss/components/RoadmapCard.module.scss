@@ -29,8 +29,7 @@
 .point {
   position: relative;
   display: flex;
-  align-items: center;
-  line-height: 1;
+  line-height: 1.6;
 
   .circle {
     content: "";
@@ -41,5 +40,19 @@
     display: block;
     margin-bottom: 0.2em;
     margin-right: 0.7em;
+    margin-top: 0.46em;
+  }
+}
+
+@include u.breakpoint(medium) {
+  .cardWrapper {
+    border-radius: u.rem(18);
+    max-width: 100% !important;
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    padding: u.rem(40) u.rem(40);
   }
 }

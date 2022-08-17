@@ -41,3 +41,52 @@
   right: 50%;
   z-index: -10;
 }
+
+@include u.breakpoint(medium) {
+  .roadmapCards {
+    & > div {
+      & > div:not(:last-child) {
+        margin-bottom: u.rem(100);
+      }
+    }
+
+    .left {
+      flex: 1;
+    }
+
+    .right {
+      margin-top: u.rem(100);
+      flex: 1;
+    }
+
+    & > :not(:last-child) {
+      margin-right: u.rem(40);
+    }
+  }
+
+  .stripe1 {
+    bottom: 86%;
+  }
+
+  .stripe2 {
+    bottom: 86%;
+  }
+
+  .stripe3 {
+    bottom: 86%;
+  }
+}
+
+@include u.breakpoint(small) {
+  .roadmapCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stripe1,
+  .stripe2,
+  .stripe3 {
+    display: none;
+  }
+}
