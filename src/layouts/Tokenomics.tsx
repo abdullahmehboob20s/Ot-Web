@@ -1,7 +1,7 @@
 import styles from "scss/layout/Tokenomics.module.scss";
-import { PieChart, Pie, Cell } from "recharts";
+import { PieChart, Pie, Cell, Sector } from "recharts";
 import { useCallback, useEffect, useState } from "react";
-import RenderActiveShape from "components/RenderActiveShape";
+import useMediaQuery from "hooks/useMediaQuery";
 
 const data = [
   { name: "100%", value: 400, color: "#EABDB4" },
@@ -14,6 +14,106 @@ const data = [
   { name: "100%", value: 600, color: "#809FF1" },
   { name: "100%", value: 100, color: "#EA862E" },
 ];
+
+const RenderActiveShape = (props: any) => {
+  const isBellow700px = useMediaQuery("(max-width : 700px)");
+  const RADIAN = Math.PI / 180;
+  const {
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    startAngle,
+    endAngle,
+    fill,
+    payload,
+    percent,
+    value,
+  } = props;
+  const sin = Math.sin(-RADIAN * midAngle);
+  const cos = Math.cos(-RADIAN * midAngle);
+  const sx = cx + (outerRadius + 10) * cos;
+  const sy = cy + (outerRadius + 10) * sin;
+  const mx = cx + (outerRadius + 30) * cos;
+  const my = cy + (outerRadius + 30) * sin;
+  const ex = mx + (cos >= 0 ? 1 : -1) * 22;
+  const ey = my;
+  const textAnchor = cos >= 0 ? "start" : "end";
+
+  return (
+    <>
+      <g>
+        <text
+          x={cx}
+          y={cy}
+          dy={-16}
+          textAnchor="middle"
+          fill={"white"}
+          className={`${isBellow700px ? "fs-22px" : "fs-14px"} `}
+        >
+          Total Supply
+        </text>
+        <text
+          x={cx}
+          y={cy}
+          dy={isBellow700px ? 8 + 20 : 8 + 13}
+          textAnchor="middle"
+          fill={"white"}
+          className={`${isBellow700px ? "fs-30px" : "fs-24px"} weight-7`}
+        >
+          {payload.name}
+        </text>
+        <Sector
+          cx={cx}
+          cy={cy}
+          innerRadius={innerRadius}
+          outerRadius={outerRadius}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          fill={fill}
+        />
+        <Sector
+          cx={cx}
+          cy={cy}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          innerRadius={outerRadius + 6}
+          outerRadius={outerRadius + 10}
+          fill={fill}
+        />
+        <path
+          d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`}
+          stroke={fill}
+          fill="none"
+        />
+        <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
+
+        <text
+          x={ex + (cos >= 0 ? 1 : -1) * 12}
+          y={ey - 10}
+          textAnchor={textAnchor}
+          fill="white"
+          className="anchorTitle"
+        >
+          {/* {`PV ${value}`} */}
+          14% - Staking
+        </text>
+        <text
+          x={ex + (cos >= 0 ? 1 : -1) * 12}
+          y={ey}
+          dy={18}
+          textAnchor={textAnchor}
+          fill="white"
+          className="anchorSubtitle"
+        >
+          {/* {`(Rate ${(percent * 100).toFixed(2)}%)`} */}
+          Tokens will be put into the staking pool
+        </text>
+      </g>
+    </>
+  );
+};
 
 // const RenderActiveShapeWrapper = ({
 //   wrapperProps,
